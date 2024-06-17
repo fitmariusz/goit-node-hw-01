@@ -6,6 +6,7 @@
 
 # dependencies
 /node_modules
+/photo
 /.pnp
 .pnp.js
 
