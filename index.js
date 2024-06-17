@@ -18,8 +18,8 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
       try {
-        const allContacts = await listContacts();
-        console.table(allContacts);
+        const contacts = await listContacts();
+        console.table(contacts);
       } catch (error) {
         console.error("Error listing contacts: ", error);
       }   
@@ -53,7 +53,7 @@ const invokeAction = async ({ action, id, name, email, phone }) => {
       break;
 
     default:
-      console.warn("\x1B[Unknown action type!");
+      console.warn("\x1B[31m Unknown action type!");
   }
 }
 
