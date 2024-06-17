@@ -1,8 +1,3 @@
-// import  Command  from "./node_modules/commander/index.js";
-// // import { listContacts } from "./contacts.js";
-// const { list : contacts } = require('./contacts.js');
-// // listContacts();
-// console.log('Start');
 import { Command}  from 'commander'
 import { listContacts, getContactById, removeContact, addContact} from './contacts.js'
 
@@ -18,7 +13,7 @@ program.parse(process.argv);
 
 const argv = program.opts();
 
-// TODO: refaktor
+
 const invokeAction = async ({ action, id, name, email, phone }) => {
   switch (action) {
     case "list":
